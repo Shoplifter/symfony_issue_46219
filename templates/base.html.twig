@@ -27,7 +27,11 @@
         </div>
         <footer class="page-footer-wrapper">
             <div class="page-footer">
-                <div class="page-footer-content">Symfony Issue #{{ issue_number }}</div>
+                <div class="page-footer-content">
+                    <a href="{{ issue_url }}">Symfony Issue #{{ issue_number }}</a>
+                    {{- ' | ' -}}
+                    <a href="{{ reproducer_url }}">Reproducer</a>
+                </div>
             </div>
         </footer>
     </body>

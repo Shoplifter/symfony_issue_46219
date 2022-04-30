@@ -4,6 +4,8 @@ twig:
         - 'bootstrap_4_layout.html.twig'
     globals:
         issue_number: "%issue_number%"
+        issue_url: "%issue_url%"
+        reproducer_url: "%reproducer_url%"
 
 when@test:
     twig:

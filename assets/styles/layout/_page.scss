@@ -51,4 +51,10 @@ body {
 .page-footer-content {
   font-size: 80%;
   color: $medium-gray;
+  & a {
+    color: $blue-dark;
+    &:hover, &:focus, &:active {
+      text-decoration: underline;
+    }
+  }
 }
