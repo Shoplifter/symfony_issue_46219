@@ -15,4 +15,5 @@ reproducer for https://github.com/symfony/symfony/issues/46219
 # How to reproduce
 - fill the form at the home page
 - save (that still works)
-- save again - Error
+- save again - Error    
+  Unable to find the object manager associated with an entity of class "Proxies\__CG__\App\Entity\User".
