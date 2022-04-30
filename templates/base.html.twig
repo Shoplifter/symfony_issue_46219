@@ -1,0 +1,35 @@
+{% trans_default_domain 'base' %}
+{% apply spaceless %}
+    <!DOCTYPE html>
+    <html lang="{{ app.request.locale }}">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Symfony Issue #{{ issue_number }}{% endblock %}</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="page-header-wrapper">
+            <div class="page-header"><h1>Symfony Issue #{{ issue_number }}</h1></div>
+        </header>
+        <div class="page-content-wrapper">
+            <div class="page-content">
+                {% block main %}{% endblock %}
+                {% block navigation %}{% include "navigation.html.twig" %}{% endblock %}
+            </div>
+        </div>
+        <footer class="page-footer-wrapper">
+            <div class="page-footer">
+                <div class="page-footer-content">Symfony Issue #{{ issue_number }}</div>
+            </div>
+        </footer>
+    </body>
+    </html>
+{% endapply %}

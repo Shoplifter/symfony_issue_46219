@@ -1,0 +1,23 @@
+@import "../variables";
+button, .btn {
+  cursor: pointer;
+  border: 1px solid $button-color;
+  background-color: #fff;
+  color: $button-color;
+  font-weight: bold;
+  transition: color $base-duration $base-timing, background-color $base-duration $base-timing;
+  //border-radius: $border-radius;
+  line-height: 1.1;
+  padding: 0.5em 1em;
+  text-align: center;
+  outline: 0;
+  text-decoration: none;
+  display: inline-block;
+  &:hover, &:focus, &:active {
+    background-color: $button-color;
+    color: #fff;
+  }
+  & .prefix {
+    margin-right: 0.4em;
+  }
+}

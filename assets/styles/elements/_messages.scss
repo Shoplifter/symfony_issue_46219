@@ -1,0 +1,35 @@
+@import "../variables";
+.flash-success,
+.flash-info,
+.flash-warning,
+.flash-error {
+  padding: $small-spacing;
+  margin: $small-spacing 0;
+  line-height: 1.15;
+  display: block;
+  overflow: hidden;
+  & a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+    &:hover,&:focus,&:active {
+      text-decoration: underline;
+    }
+  }
+}
+.flash-success {
+  background-color: $success-color;
+  color: #fff;
+}
+.flash-info {
+  background-color: $info-color;
+  color: #fff;
+}
+.flash-warning {
+  background-color: $warning-color;
+  color: darken($warning-color, 40%);
+}
+.flash-error {
+  background-color: $error-color;
+  color: #fff;
+}

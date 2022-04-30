@@ -1,0 +1,30 @@
+<nav class="page-aside navigation">
+    {% set route = app.request.attributes.get('_route') %}
+    <h3>Employees (with embedded user form)</h3>
+    <ul>
+        <li>
+            <a href="{{ path('home') }}"{% if route == 'home' and employee.id is same as(null) %} class="active" {% endif %}>
+                {{- 'Create new employee' -}}
+            </a>
+        </li>
+        {% for e in employees %}
+            <li>
+                <a href="{{ path('home', {id: e.id}) }}"{% if route == 'home' and employee.id == e.id %} class="active" {% endif %}>
+                    {{- e.user.firstName ~ ' ' ~ e.user.lastName -}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    {% if employees %}
+        <h3>Users (standalone form)</h3>
+        <ul>
+        {% for e in employees %}
+            <li>
+                <a href="{{ path('edit_user', {id: e.user.id}) }}"{% if route == 'edit_user' and user.id == e.user.id %} class="active" {% endif %}>
+                    {{- e.user.firstName ~ ' ' ~ e.user.lastName -}}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</nav>

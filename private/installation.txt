@@ -1,0 +1,23 @@
+cd c:\app
+composer create-project symfony/skeleton Symfony.Reproducer
+cd Symfony.Reproducer
+
+composer require symfony/apache-pack
+
+composer require --dev symfony/debug-pack
+composer require twig/twig
+composer require symfony/orm-pack
+composer require form
+composer require validator
+composer require symfony/webpack-encore-bundle
+composer require --dev symfony/debug-pack
+composer require maker --dev
+
+php bin/console doctrine:database:create
+
+yarn install
+yarn add sass-loader sass --dev
+yarn add postcss-loader --dev
+yarn add autoprefixer --dev
+yarn add stimulus-use@beta --dev
+yarn add normalize.css

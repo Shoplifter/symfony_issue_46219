@@ -1,0 +1,46 @@
+// TYPOGRAPHY
+$base-font-color: #333;
+$base-font-family: Arial,Helvetica,sans-serif;
+$heading-font-family: $base-font-family;
+$base-line-height: 1.625;
+$heading-line-height: 1.25;
+$base-font-size: 1rem;
+
+// COLORS
+$dark-gray: #373b4d;
+$medium-gray: #a0a09f;
+$light-gray: #e6e6e6;
+$lighter-gray: #eee;
+$red: #f00;
+$red-dark: #ab0020;
+$green-dark: #5B7914;
+$green-medium: #89ab36;
+$green-light: #a7c253;
+$blue-dark: #237f9e;
+$blue-light: #50bed7;
+$yellow: #ffce00;
+
+$error-color: $red;
+$info-color: $blue-dark;
+$warning-color: $yellow;
+$success-color: $green-medium;
+$button-color: $dark-gray;
+// SPACING
+$base-spacing: 1.25rem;
+$small-spacing: $base-spacing / 2;
+
+$base-action-color: $green-medium;
+$base-action-color-hover: $green-dark;
+
+// ANIMATIONS
+$base-duration: 250ms;
+$base-timing: ease-in-out;
+
+// BREAKPOINTS
+$breakpoints: (
+  'S'  :  480px,
+  'M'  :  640px,
+  'L'  :  768px, // menu switch
+  'XL' :  820px, // content-main-aside-column-switch
+  'XXL':  1024px,
+);

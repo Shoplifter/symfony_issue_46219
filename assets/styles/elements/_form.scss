@@ -1,0 +1,52 @@
+@import "../variables";
+.form-footer {
+  margin-top: $base-spacing;
+  text-align: right;
+}
+label.required:after {
+  content: '\0000a0*';
+}
+.form-group {
+  margin-bottom: $small-spacing;
+  display: flex;
+  & label {
+    flex: 0 0 30%;
+    position: relative;
+    padding-right: $small-spacing;
+    &.required:after {
+      position: absolute;
+      font-size: 1.5em;
+      right: $small-spacing;
+      top: 0;
+    }
+  }
+  & .form-control {
+    flex: 0 0 70%;
+    align-self: flex-start;
+    font-size: 1.25em;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    background-color: #f4f4f4;
+    padding: $small-spacing;
+    transition: border-bottom-color $base-duration $base-timing;
+    &:focus {
+      border-bottom-color: #000;
+      outline: 0;
+    }
+  }
+}
+.invalid-feedback {
+  display: block;
+  line-height: 1.1;
+  font-size: 80%;
+  color: $error-color;
+  & .form-error-icon {
+    color: #fff;
+    background: $error-color;
+    padding: 0.1em 0.4em;
+    //font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 0.25em;
+    font-size: 80%;
+  }
+}

@@ -1,0 +1,27 @@
+@import "variables";
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.cf {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+.nobr {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.br {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.hidden {
+  display: none !important;
+}

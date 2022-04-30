@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block main %}
+<main class="page-main">
+    <h2>
+        {%- if employee.id -%}
+            {{- 'Edit Employee: ' ~ employee.user.firstName ~ ' ' ~ employee.user.lastName -}}
+        {%- else -%}
+            {{- 'Create Employee' -}}
+        {%- endif -%}
+    </h2>
+    {% include 'messages.html.twig' %}
+    {{ form_start(form, {action: path('home', {id: employee.id})}) }}
+    {{ form_row(form.division) }}
+    {{ form_row(form.salary) }}
+    {{ form_row(form.user.firstName) }}
+    {{ form_row(form.user.lastName) }}
+    {{ form_row(form.user.email) }}
+    {{ form_row(form.user.mobilePhone) }}
+    <footer class="form-footer">
+        <button type="submit" formnovalidate="formnovalidate">Save</button>
+    </footer>
+    {{ form_end(form) }}
+</main>
+{% endblock %}

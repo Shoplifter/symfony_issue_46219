@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block main %}
+<main class="page-main">
+    <h2>
+        {{- 'Edit User: ' ~ user.firstName ~ ' ' ~ user.lastName -}}
+    </h2>
+    {% include 'messages.html.twig' %}
+    {{ form_start(form, {action: path('edit_user', {id: user.id})}) }}
+    {{ form_row(form.firstName) }}
+    {{ form_row(form.lastName) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.mobilePhone) }}
+    <footer class="form-footer">
+        <button type="submit" formnovalidate="formnovalidate">Save</button>
+    </footer>
+    {{ form_end(form) }}
+</main>
+{% endblock %}

@@ -1,0 +1,45 @@
+@import "../variables";
+body {
+  font-feature-settings: "kern", "liga", "pnum";
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,h2,h3,h4,h5,h6,
+.alpha,.beta,.gamma,.delta,.epsilon,.zeta {
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  margin: 0;
+  //font-weight: normal;
+  font-size: $base-font-size;
+}
+h1,.alpha {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: $base-spacing;
+}
+h2,.beta {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: $small-spacing;
+}
+h3,.gamma {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: $small-spacing;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $base-action-color;
+  transition: color $base-duration $base-timing,  background-color $base-duration $base-timing;
+  &:hover, &:focus, &:active {
+    color: $base-action-color-hover;
+  }
+}

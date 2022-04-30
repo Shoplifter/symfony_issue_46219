@@ -1,0 +1,32 @@
+@import "../variables";
+.navigation {
+  & h3 {
+    font-size: 1em;
+    font-weight: normal;
+    border-bottom: 1px solid $base-font-color;
+    margin-bottom: 0.25em;
+    margin-top: $base-spacing;
+    padding: 0 $small-spacing;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  & li {
+    margin-bottom: 1px;
+  }
+  & a {
+    color: $base-font-color;
+    background: $lighter-gray;
+    padding: 0 $small-spacing;
+    display: block;
+    &:hover, &:focus, &:active {
+      background: lighten($green-light, 20%);
+      color: #000;
+    }
+    &.active {
+      background: $green-dark;
+      color: #fff;
+      pointer-events: none;
+    }
+  }
+}

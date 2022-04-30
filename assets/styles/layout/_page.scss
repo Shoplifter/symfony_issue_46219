@@ -1,0 +1,54 @@
+@import "../variables";
+// sticky footer
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+}
+.page-header-wrapper,
+.page-footer-wrapper {
+  flex: none;
+}
+.page-content-wrapper {
+  flex: 1 0 auto;
+}
+.page-header,
+.page-content,
+.page-footer-logos,
+.page-footer {
+  margin: 0 auto;
+  max-width: map-get($breakpoints, XXL);
+}
+// page-content
+.page-content {
+  display: flex;
+  flex-direction: column;
+}
+.page-header,
+.page-main,
+.page-aside,
+.page-footer {
+  padding: $base-spacing;
+}
+
+@media screen and (min-width: map-get($breakpoints, XL)) {
+  .page-content {
+    flex-direction: row;
+  }
+  .page-main {
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+  .page-aside {
+    flex: 0 0 35%;
+  }
+}
+.page-footer-content {
+  font-size: 80%;
+  color: $medium-gray;
+}
